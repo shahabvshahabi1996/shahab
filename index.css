@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+body {
+  overflow-x : hidden;
+}
+.Home h1 {
+  font-family: 'Pacifico', cursive;
+  line-height : 70px;
+}
+.Home p , .Home ul , .Home li , .Home a{
+  font-family: 'Roboto Mono', monospace;
+}
+.Home li {
+  margin : 15px;
+}
+i {
+  font-size : 40px;
+  margin : 5px;
+}
+
+.twitter  i {
+  color : #0084b4;
+}
+.github i {
+  color : #252525;
+}
+.Medium i{
+  color : #57AD68;
+}
+
+.Links {
+}
+
+.Body {
+  font-family: 'Satisfy', cursive;
+  background-color: #fa8bff !important;
+  background: linear-gradient(45deg, #fa8bff 0%, #2bd2ff 52%, #2bff88 90%) !important;
+  font-family: sans-serif;
+  height : 100vh;
+  position:fixed;
+  width : 50%;
+  z-index : 50;
+  overflow-x: hidden;
+}
+.earth {
+  height: 35vh;
+  width: 35vh;
+  border-radius: 50%;
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: inset -30px 0 rgba(0, 0, 0, 0), 0 0 0 120px rgba(20, 106, 221, 0.05), 0 0 0 300px rgba(20, 106, 221, 0.15), 0 0 0 500px rgba(20, 106, 221, 0.05);
+}
+/* Land */
+.earth:before {
+  content: "";
+  position: absolute;
+  height: 5vh;
+  width: 10vh;
+  left: 0;
+  top: 15%;
+  display: block;
+  border-radius: 45px;
+  transform : skewX(50deg);
+  animation: rotateElement linear 25s infinite;
+  box-shadow: 0px 75px 0 -5px rgba(0, 219, 222, 0.5), 5px 35px 0 -3px rgba(0, 219, 222, 0.6), 35px 125px 0 -9px rgba(0, 219, 222, 0.4), 120px -15px 0 -7px rgba(0, 219, 222, 0.3), 135px -55px 0 -9px rgba(0, 219, 222, 0.2), 150px 25px 0 7px rgba(0, 219, 222, 0.6), 220px 70px 0 -2px rgba(0, 219, 222, 0.5), 235px -35px 0 -3px rgba(0, 219, 222, 0.4), 280px 85px 0 3px rgba(0, 219, 222, 0.3), 320px 30px 0 1px rgba(0, 219, 222, 0.2), 400px 0 0 0 rgba(252, 0, 255, 0.7), 400px 75px 0 -5px rgba(252, 0, 255, 0.6), 405px 35px 0 -3px rgba(252, 0, 255, 0.5), 435px 125px 0 -9px rgba(252, 0, 255, 0.4), 520px -15px 0 -7px rgba(252, 0, 255, 0.3), 535px -55px 0 -9px rgba(252, 0, 255, 0.2), 550px 25px 0 7px rgba(252, 0, 255, 0.6), 620px 70px 0 -2px rgba(252, 0, 255, 0.5), 635px -35px 0 -3px rgba(252, 0, 255, 0.4), 680px 85px 0 3px rgba(252, 0, 255, 0.3), 720px 30px 0 1px rgba(252, 0, 255, 0.2);
+}
+/* Clouds */
+.earth:after {
+  content: "";
+  position: absolute;
+  background: #fad961;
+  height: 3vh;
+  width: 6vh;
+  left: 0px;
+  top: 30%;
+  display: block;
+  border-radius: 40px;
+  opacity: 0.85;
+  animation: rotateElement linear 30s infinite;
+  box-shadow: 10px 50px 0 3px #fad961, 50px -15px 0 2px #ff6a88, 70px 70px 0 -1px #fad961, 100px 25px 0 1px #ff6a88, 110px 105px 0 -4px #fad961, 140px 75px 0 -3px #ff6a88, 250px -25px 0 -1px #fad961, 210px 50px 0 1px #ff6a88, 340px 130px 0 1px #fad961, 400px 0px 0 0 #fad961, 410px 50px 0 3px #ff6a88, 500px 25px 0 1px #fad961, 450px -15px 0 2px #ff6a88, 470px 70px 0 -1px #fad961, 540px 75px 0 -3px #ff6a88, 510px 105px 0 -4px #fad961, 650px -25px 0 -1px #ff6a88, 610px 50px 0 1px #fad961, 740px 130px 0 1px #ff6a88;
+}
+.earth--shadow {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  background-color: transparent;
+  z-index: 4;
+  box-shadow: inset -30px 0 rgba(0, 0, 0, 0.1);
+}
+.moon {
+  height: 3.5vh;
+  width: 3.5vh;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #fee140;
+  background-image: linear-gradient(90deg, #fee140 0%, #fa709a 100%);
+  top: 50%;
+  left: 70%;
+  transform: translate(-50vh, -50vh);
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: inset -3px 0 rgba(0, 0, 0, 0.2);
+  animation: moonOrbit ease-in-out 20s infinite;
+}
+.moon:after {
+  content: '';
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+}
+.stars {
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  z-index: -1;
+  animation: stars linear 100s infinite;
+  box-shadow: 510px -450px 0 1px white, 490px -125px 0 -2px white, 150px -150px 0 -1px white, 130px 270px 0 -1px white, 480px 475px 0 -3px white, -610px 605px 0 -4px white, 570px 750px 0 -3px white, -550px 425px 0 1px white, 650px -105px 0 -2px white, 310px 60px 0 -1px white, -340px 175px 0 -3px white, -610px 1205px 0 -4px white, 500px 450px 0 -3px white, -500px 125px 0 1px white, -150px -615px 0 -2px white, -110px -370px 0 -1px white, -440px -175px 0 -3px white, -610px -205px 0 -4px white, 410px -450px 0 -3px white, 390px -125px 0 -2px white, 50px -250px 0 -1px white, 30px -170px 0 -1px white, 380px 375px 0 -5px white, -710px 705px 0 -6px white, 470px -650px 0 -3px white, -450px 425px 0 1px white, 550px -205px 0 -5px white, 210px 50px 0 -1px white, -240px 275px 0 -5px white, -510px 120px 0 -4px white, 600px 550px 0 -3px white, -400px 225px 0 1px white, -250px -515px 0 -2px white, -310px -170px 0 -4px white, -340px -275px 0 -4px white, -510px -305px 0 -5px white;
+}
+@keyframes rotateElement {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-80%, 0);
+  }
+}
+@keyframes stars {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(180deg);
+  }
+}
+@keyframes moonOrbit {
+  0% {
+    transform: translate(-55vh, 0);
+    z-index: 10;
+  }
+  30% {
+    z-index: -1;
+  }
+  50% {
+    transform: translate(20vh, 0);
+  }
+  100% {
+    transform: translate(-55vh, 0);
+  }
+}
+.welcome {
+  font-family: 'Pacifico', cursive;
+  font-size: 8vh;
+  position: absolute;
+  color: #fff;
+  top: 15%;
+  left: 10%;
+  z-index: 9;
+  line-height: 100%;
+}
+@media (max-width: 376px) {
+  .welcome {
+    top: 15%;
+    font-size: 40px;
+  }
+}
+
+@media (max-width : 769px){
+  .Body{
+    position:relative;
+    width : 100%;
+  } 
+}
+
+.pro-img {
+    margin-top:5px;
+    margin-bottom: 10px;
+}
